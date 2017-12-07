@@ -33,9 +33,8 @@ class Transfer
         #sender.balance = @sender.deposit(@amount * -1 )
         #receiver.balance = @receiver.deposit(@amount)
         if @sender.balance < @amount
-          return "Transaction rejected. Please check your account balance."
           @status = "rejected"
-
+          return "Transaction rejected. Please check your account balance."
         elsif
           @status == "complete"
         else
